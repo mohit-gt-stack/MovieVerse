@@ -2,23 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MovieVerse</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <div class="container">
-    <h1> MovieVerse</h1>
+  <div class="main">
 
+    <!-- LOGO -->
+    <h1 class="logo">🎬 MovieVerse</h1>
+
+    <!-- SEARCH + FILTERS -->
     <div class="search-box">
-      <input type="text" id="searchInput" placeholder="Search movie name...">
+
+      <input type="text" id="searchInput" placeholder="Search movies...">
+
       <button id="searchBtn">Search</button>
+
+      <select id="yearFilter">
+        <option value="all">All Years</option>
+        <option value="2024">2024</option>
+        <option value="2023">2023</option>
+        <option value="2022">2022</option>
+        <option value="2021">2021</option>
+        <option value="2020">2020</option>
+      </select>
+
+      <select id="sortSelect">
+        <option value="default">Sort</option>
+        <option value="az">A-Z</option>
+        <option value="za">Z-A</option>
+        <option value="yearLow">Year Low-High</option>
+        <option value="yearHigh">Year High-Low</option>
+      </select>
+
     </div>
 
+    <!-- TITLE -->
+    <h2 id="trendingTitle">Trending Movies 🔥</h2>
+
+    <!-- MOVIES -->
     <div id="moviesContainer"></div>
+
   </div>
 
   <script src="script.js"></script>
+
 </body>
 </html>
